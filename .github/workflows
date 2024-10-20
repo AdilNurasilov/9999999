@@ -7,16 +7,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
+    - name: Checout repository
       uses: actions/checkout@v3
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v3
       with:
-        python-version: '3.x'  
-
-    - name: Display script content
-      run: cat script.py  
+        python-version: '3.12.6'
 
     - name: Run Python Script
-      run: python script.py 
+      run: python hw3/script.py
